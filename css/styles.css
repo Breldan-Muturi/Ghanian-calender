@@ -67,6 +67,11 @@ p{
     padding: 5px;
     background-color: antiquewhite;
     max-width: 40%;
+    max-height: 275px;
+}
+.card-title{
+    text-align: center;
+    border-radius: 10px;
 }
 
 
