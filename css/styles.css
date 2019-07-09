@@ -37,4 +37,14 @@ h1{
     color: purple;
     border-radius: 30px;
 }
+body{
+    background-image: url(../ghana.jpg);
+    background-size: cover;
+}
+.card{
+    color: aliceblue;
+}
+p{
+    color: white;
+}
 
