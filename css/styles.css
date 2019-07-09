@@ -1,54 +1,40 @@
-.nav li{
-    display: inline-block;
-    padding: 20px;
-}
-.nav{
-    width: 100%;
-    list-style-type: none;
-    padding: 20px;
-}
-div button{
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 50px;
-    background-color: aqua;
-    text-transform: uppercase;
-    padding: 10px;
-}
-div button:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
+button{
+    -webkit-transition-duration: 500ms;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    color: blue;
     padding: 8px 21.6px;
-}  
-.btn-group div{
-    padding: 20px;
-    margin: 20px;
-    display: block;
-    align-content: flex-end
+}
+ul {
+    list-style-type: none;
+    display: inline;
 }
 .nav-element{
-    text-align: right;
-    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
 }
 .nav-element li{
     display: inline-block;
 }
-input{
-    max-height: 15px;
-    max-width: 250px;
-    border-radius: 10px;
+.landing{
+    margin-top: 20px;
+}
+.Female{
+    justify-content: flex-end;
+    float: right;
+}
+.jumbotron{
+    background-color: aqua;
+    color: brown;
     padding: 5px;
-    margin: 4px;
-}
-button .btn .btn-default{
-    -webkit-transition-duration: 500ms; /* Safari */
-    transition-duration: 500ms;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 30px;
-    background-color: gray;
-    text-transform: capitalize;
-    padding: 10px;
 }
-button .btn .btn-default:hover{
-    background-color: black;
-    color: white;
+h1{
+    padding: 15px;
+    background-color: bisque;
+    color: purple;
+    border-radius: 30px;
 }
+
