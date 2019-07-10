@@ -1,0 +1,75 @@
+button{
+    -webkit-transition-duration: 500ms;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    color: blue;
+    padding: 8px 21.6px;
+}
+button .btn .btn-default{
+    -webkit-transition-duration: 500ms;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    color: blue;
+    padding: 8px 21.6px;
+}
+ul {
+    list-style-type: none;
+    display: inline;
+}
+.nav-element{
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-element li{
+    display: inline-block;
+}
+.landing{
+    margin-top: 20px;
+}
+.Female{
+    justify-content: flex-end;
+}
+.jumbotron{
+    background-color: rgb(205, 228, 144);
+    color: brown;
+    padding: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    max-width: 60%;
+    margin-left: 20%;
+}
+h1{
+    padding: 8px;
+    background-color: bisque;
+    color: purple;
+    border-radius: 30px;
+    max-width: 50%;
+    margin-left: 20%;
+    text-align: center;
+    backface-visibility: inherit;
+}
+body{
+    background-image: url(../ghana2.jpg);
+    background-size: cover;
+    background-blend-mode: brown;
+}
+p{
+    color: white;
+    padding: 10px;
+    background-color: brown;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card{
+    color: black;
+    padding: 5px;
+    background-color: antiquewhite;
+    max-width: 40%;
+    max-height: 275px;
+}
+.card-title{
+    text-align: center;
+    border-radius: 10px;
+}
