@@ -68,6 +68,8 @@ p{
     background-color: antiquewhite;
     max-width: 40%;
     max-height: 275px;
+    border-block-r: blueviolet;
+    
 }
 .card-title{
     text-align: center;
