@@ -73,3 +73,11 @@ p{
     text-align: center;
     border-radius: 10px;
 }
+.form-group label{
+    font-weight: bolder;
+    color: blue;
+}
+#input{
+    max-width: 15%;
+}
+form
