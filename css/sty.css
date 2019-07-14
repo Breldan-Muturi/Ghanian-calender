@@ -3,3 +3,21 @@ body{
     background-size: cover;
     background-blend-mode: brown;
 }
+h1{
+    padding: 8px;
+    background-color: bisque;
+    color: purple;
+    border-radius: 30px;
+    max-width: 50%;
+    margin-left: 20%;
+    text-align: center;
+    backface-visibility: inherit;
+}
+p{
+    color: white;
+    padding: 10px;
+    background-color: brown;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}

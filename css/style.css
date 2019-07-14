@@ -76,16 +76,9 @@ p{
 .form-group label{
     font-weight: bolder;
     color: blue;
+    text-align: center;
 }
-#CC{
-    max-width: 15%;
 }
-#YY{
-    max-width: 15%;
-}
-#MM{
-    max-width: 15%;
-}
-#DD{
+.panel{
     max-width: 15%;
 }
