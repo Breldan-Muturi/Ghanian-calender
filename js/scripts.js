@@ -1,57 +1,60 @@
-var arr=[] //creating variables for the input dates.
-function CC(){
-    CC=document.getElementById("CC").nodeValue;
-    arr.push(CC);
-} 
-function CC(){
-    CC=document.getElementById("CC").nodeValue;
-    arr.push(CC);
+var century, year, month, dayOfBirth, dayOfWeek, gender
+function myInput(){
+    century=parseInt(document.getElementById("CC"));
+    year=parseInt(document.getElementById("YY"));
+    month=parseInt(document.getElementById("MM"));
+    dayOfBirth=parseInt(document.getElementById("DD"));
+    gender=getElementById("gender");
 }
-function CC(){
-    CC=document.getElementById("CC").nodeValue;
-    arr.push(CC);
+function calculateDay(){
+    myInput();
+    dayOfWeek=( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfMonth) % 7;
+    return (Math.round(dayOfWeek));
 }
-function CC(){
-    CC=document.getElementById("CC").nodeValue;
-    arr.push(CC);
-}
-function birthDay(){
-    input();
-    d=(((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7;
-}
-var Male=confirm("Please tick your Gender");
-}
+
 function checkTheDay (){
+    calculateDay();
     var theDay = birthDay();
     if (theDay==0 && Male=== true){
-        document.write("This was a Sunday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Sunday"+""+"You're Kwasi");
     } else if (theDay==1 && Male=== true){
-        document.write("This was a Monday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Monday"+""+"You're Kwasi");
     } else if (theDay==2 && Male=== true ){
-        document.write("This was a Tuesday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Tuesday"+""+"You're Kwasi");
     } else if (theDay==3 && Male=== true){
-        document.write("This was a Wednesday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Wednesday"+""+"You're Kwasi");
     } else if (theDay==4 && Male=== true){
-        document.write("This was a Thursday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Thursday"+""+"You're Kwasi");
     } else if (theDay==5 && Male=== true){
-        document.write("This was a Friday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Friday"+""+"You're Kwasi");
     } else if (theDay==6 && Male=== true){
-        document.write("This was a Saturday"+""+"You're Kwasi");
-    } else if (theDay==0 && Male=== false){
-        document.write("This was a Sunday"+""+"You're Kwasi");
-    } else if (theDay==1 && Male=== false){
-        document.write("This was a Monday"+""+"You're Kwasi");
-    } else if (theDay==2 && Male=== false ){
-        document.write("This was a Tuesday"+""+"You're Kwasi");
-    } else if (theDay==3 && Male=== false){
-        document.write("This was a Wednesday"+""+"You're Kwasi");
-    } else if (theDay==4 && Male=== false){
-        document.write("This was a Thursday"+""+"You're Kwasi");
-    } else if (theDay==5 && Male=== false){
-        document.write("This was a Friday"+""+"You're Kwasi");
-    } else if (theDay==6 && Male=== false){
-        document.write("This was a Saturday"+""+"You're Kwasi");
+        document.getElementById("Akan").innerHTML=("This was a Saturday"+""+"You're Kwasi");
+    } else if (theDay==0 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Sunday"+""+"You're Kwasi");
+    } else if (theDay==1 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Monday"+""+"You're Kwasi");
+    } else if (theDay==2 && Female===true ){
+        document.getElementById("Akan").innerHTML=("This was a Tuesday"+""+"You're Kwasi");
+    } else if (theDay==3 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Wednesday"+""+"You're Kwasi");
+    } else if (theDay==4 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Thursday"+""+"You're Kwasi");
+    } else if (theDay==5 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Friday"+""+"You're Kwasi");
+    } else if (theDay==6 && Female===true){
+        document.getElementById("Akan").innerHTML=("This was a Saturday"+""+"You're Kwasi");
     } else {
-        document.write("Invalid Format!")
+        document.getElementById("Akan").innerHTML=("Invalid Format!");
+    }
+} 
+function validate(){
+    checkTheDay();
+    if (DD <= 0 || DD > 31){
+    alert("INVALID DAY OF BIRTH. ENTER A NUMBER BETWEEN 1 AND 31");
+    return;
+    } 
+    if (MM <=0 || MM > 12){
+    alert("INVALID MONTH OF BIRTH. ENTER A NUMBER BETWEEN 1 AND 12");
+    return;
     }
 }

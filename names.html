@@ -2,14 +2,14 @@
 <html>
     <head>
             <meta charset="utf-8">
-            <meta name="description" content="This is a website that shows would-be Ghanian names based on the day of the week and gender."><!--This helps to search optimize (seo) so my website is easier to find on a browser.-->
-            <meta name="viewport" content="width=device-width,initial-scale=1"><!--Makes the website more responsive in case of media queries inside the browser-->
-            <meta name="author" content="Turi">
             <title>Turi's Akan Names calculator</title>
             <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
             <link href="css/style.css" rel="stylesheet" type="text/css">
+            
     </head>
+    <script>This is our javascript being written before anything else</script>
     <body>
+        <script src="js/scripts.js"></script>
             <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
                     <a class="navbar-brand" href="#">Turi's Akan Names</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,39 +41,39 @@
                         <h1>Fill in the form below.</h1>
                         <p>You are required to fill in your birthday in the form provided, choose your gender from the available checkboxes and finally submit for our system to calculate the day of the week for your birthday and ultimately find your Akan Name.The application will raise an alert message if the form is left empty or an invalid date or month is keyed in.</p>
                   </div>
-                  <form>
+                  <form name="akan">
                     <div class="form-group">
                       <label for="enter century">Century</label>
-                      <input type="number" class="form-control" id="input">
+                      <input type="number" class="form-control" id="CC">
                       <small class="form-text">We'll never share your email with anyone else.</small>
+                      <button type="submit" onclick="CC();" form="akan">Submit</button>
                     </div>
                     <div class="form-group">
                       <label for="enter year">Year</label>
-                      <input type="number" class="form-control" id="input">
+                      <input type="number" class="form-control" id="YY">
                       <small class="form-text">We'll never share your email with anyone else.</small>
+                      <button type="submit" onclick="YY();" form="akan">Submit</button>
                     </div>
                     <div class="form-group">
                       <label for="enter month">Month</label>
-                      <input type="number" class="form-control" id="input">
+                      <input type="number" class="form-control" id="MM">
                       <small class="form-text">We'll never share your email with anyone else.</small>
+                      <button type="submit" onclick="MM();" form="akan">Submit</button>
                     </div>
                     <div class="form-group">
                       <label for="enter day of month">day of Month</label>
-                      <input type="number" class="form-control" id="input">
+                      <input type="number" class="form-control" id="DD">
                       <small class="form-text">We'll never share your email with anyone else.</small>
+                      <button type="submit" onclick="DD();" form="akan">Submit</button>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="gender">
-                      <label class="form-check-label" for="gender">
-                        Male
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="Female">
-                      <label class="form-check-label" for="Female">
-                        Female
-                      </label>
                   </form>
-                    <script src="js/scripts.js"></script>
+                  <p>Please select your gender here below
+                      <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>  
+                      </p>
+                  <p id="Akan"></p>
+                  
     </body>
 </html>
