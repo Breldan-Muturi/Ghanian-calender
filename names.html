@@ -7,9 +7,7 @@
             <link href="css/style.css" rel="stylesheet" type="text/css">
             
     </head>
-    <script>This is our javascript being written before anything else</script>
     <body>
-        <script src="js/scripts.js"></script>
             <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
                     <a class="navbar-brand" href="#">Turi's Akan Names</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,39 +39,33 @@
                         <h1>Fill in the form below.</h1>
                         <p>You are required to fill in your birthday in the form provided, choose your gender from the available checkboxes and finally submit for our system to calculate the day of the week for your birthday and ultimately find your Akan Name.The application will raise an alert message if the form is left empty or an invalid date or month is keyed in.</p>
                   </div>
-                  <form name="akan">
+                  <div class="panel col-sm-6 offset-sm-3 text-center">
                     <div class="form-group">
-                      <label for="enter century">Century</label>
-                      <input type="number" class="form-control" id="CC">
-                      <small class="form-text">We'll never share your email with anyone else.</small>
-                      <button type="submit" onclick="CC();" form="akan">Submit</button>
+                      <label for="century">Century</label>
+                      <input type="text" class="form-control" placeholder="Enter the century" id="century">
                     </div>
                     <div class="form-group">
-                      <label for="enter year">Year</label>
-                      <input type="number" class="form-control" id="YY">
-                      <small class="form-text">We'll never share your email with anyone else.</small>
-                      <button type="submit" onclick="YY();" form="akan">Submit</button>
+                      <label for="year">Year</label>
+                      <input type="text" placeholder="Enter the year" class="form-control" id="year">
                     </div>
                     <div class="form-group">
-                      <label for="enter month">Month</label>
-                      <input type="number" class="form-control" id="MM">
-                      <small class="form-text">We'll never share your email with anyone else.</small>
-                      <button type="submit" onclick="MM();" form="akan">Submit</button>
+                      <label for="month">Month</label>
+                      <input type="text" class="form-control" placeholder="Month of year (1-12)" id="month">
                     </div>
                     <div class="form-group">
-                      <label for="enter day of month">day of Month</label>
-                      <input type="number" class="form-control" id="DD">
-                      <small class="form-text">We'll never share your email with anyone else.</small>
-                      <button type="submit" onclick="DD();" form="akan">Submit</button>
+                      <label for="monthDay">Day of month</label>
+                      <input type="text" placeholder="Day of Month (1-31)" class="form-control" id="monthday">
                     </div>
-                  </form>
-                  <p>Please select your gender here below
-                      <select name="gender" id="gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                      </select>  
-                      </p>
-                  <p id="Akan"></p>
-                  
+                    <form class="radio-button">
+                      <input type="radio" class="genders" value="male" id="rad1" name="choice">Male
+                      <input type="radio" class="genders" value="female" id="rad1" name="choice">Female
+                    </form>
+                    <br>
+                    <a href="#result"><button type="button" name="button" class="btn btn-dark" onclick="checkTheDay();">Calculate Day</button></a>
+                    <h1 id="result">0</h1>
+            </div>
+        
+          </div>
+          <script src="js/scripts.js"></script>
     </body>
 </html>

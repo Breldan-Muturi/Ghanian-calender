@@ -1,60 +1,96 @@
-var century, year, month, dayOfBirth, dayOfWeek, gender
+var century, year, month, dayOfBirth, dayOfWeek, day;
+
 function myInput(){
-    century=parseInt(document.getElementById("CC"));
-    year=parseInt(document.getElementById("YY"));
-    month=parseInt(document.getElementById("MM"));
-    dayOfBirth=parseInt(document.getElementById("DD"));
-    gender=getElementById("gender");
-}
-function calculateDay(){
-    myInput();
-    dayOfWeek=( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfMonth) % 7;
-    return (Math.round(dayOfWeek));
+  century = parseInt(document.getElementById("century").value);
+  year = parseInt(document.getElementById("year").value);
+  month = parseInt(document.getElementById("month").value);
+  dayOfBirth = parseInt(document.getElementById("monthday").value);
 }
 
-function checkTheDay (){
-    calculateDay();
-    var theDay = birthDay();
-    if (theDay==0 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Sunday"+""+"You're Kwasi");
-    } else if (theDay==1 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Monday"+""+"You're Kwasi");
-    } else if (theDay==2 && Male=== true ){
-        document.getElementById("Akan").innerHTML=("This was a Tuesday"+""+"You're Kwasi");
-    } else if (theDay==3 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Wednesday"+""+"You're Kwasi");
-    } else if (theDay==4 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Thursday"+""+"You're Kwasi");
-    } else if (theDay==5 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Friday"+""+"You're Kwasi");
-    } else if (theDay==6 && Male=== true){
-        document.getElementById("Akan").innerHTML=("This was a Saturday"+""+"You're Kwasi");
-    } else if (theDay==0 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Sunday"+""+"You're Kwasi");
-    } else if (theDay==1 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Monday"+""+"You're Kwasi");
-    } else if (theDay==2 && Female===true ){
-        document.getElementById("Akan").innerHTML=("This was a Tuesday"+""+"You're Kwasi");
-    } else if (theDay==3 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Wednesday"+""+"You're Kwasi");
-    } else if (theDay==4 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Thursday"+""+"You're Kwasi");
-    } else if (theDay==5 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Friday"+""+"You're Kwasi");
-    } else if (theDay==6 && Female===true){
-        document.getElementById("Akan").innerHTML=("This was a Saturday"+""+"You're Kwasi");
-    } else {
-        document.getElementById("Akan").innerHTML=("Invalid Format!");
-    }
-} 
-function validate(){
-    checkTheDay();
-    if (DD <= 0 || DD > 31){
-    alert("INVALID DAY OF BIRTH. ENTER A NUMBER BETWEEN 1 AND 31");
-    return;
-    } 
-    if (MM <=0 || MM > 12){
-    alert("INVALID MONTH OF BIRTH. ENTER A NUMBER BETWEEN 1 AND 12");
-    return;
+function getTheDay(){
+    myInput();
+    dayOfWeek = (((century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfBirth) % 7;
+    dayOfWeek -=1;
+    console.log(dayOfWeek); 
+    return (Math.floor(dayOfWeek));
+}
+
+ function checkTheDay(){
+     day = getTheDay();
+      checkTheGender();
+      console.log("The function runs");
+}
+
+
+let daysOfWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+
+
+
+function checkTheGender(){
+  var sex = document.getElementsByName("choice");
+  if(sex[0].checked == true){
+      var gender = "male";
+  }else if(sex[1].checked == true){
+      var gender = "female";
+  }else {
+    console.log("pass");
+  }
+    switch(gender){
+        case gender = "male":
+              switch(day){
+                case 0:
+                  document.getElementById("result").innerHTML = "The day is on a sunday." + "  " + "Your akan name is " + maleNames[0];
+                break;
+                case 1:
+                  document.getElementById("result").innerHTML = "The day is on a monday." + " " + "Your akan name is " + maleNames[1];
+                break;
+                case 2:
+                  document.getElementById("result").innerHTML = "The day is on a tuesday." + " " + "Your akan name is " + maleNames[2];
+                break;
+                case 3:
+                  document.getElementById("result").innerHTML = "The day is on a wednesday." + " " + "Your akan name is "+ maleNames[3];
+                break;
+                case 4:
+                  document.getElementById("result").innerHTML = "The day is on a thursday." + " " + "Your akan name is " + maleNames[4];
+                break;
+                case 5:
+                  document.getElementById("result").innerHTML = "The day is on a friday." + " " + "Your akan name is " + maleNames[5];
+                break;
+                case 6:
+                  document.getElementById("result").innerHTML = "The day is on a saturday." + " " + "Your akan name is " + maleNames[6];
+                break;
+                default:
+                
+              }
+        break;
+        case gender = "female":
+                switch(day){
+                  case 0:
+                    document.getElementById("result").innerHTML = "The day is on a sunday." + "  " + "Your akan name is  akosua";
+                  break;
+                  case 1:
+                    document.getElementById("result").innerHTML = "The day is on a monday." + " " + "Your akan name is adwoa ";
+                  break;
+                  case 2:
+                    document.getElementById("result").innerHTML = "The day is on a tuesday." + " " + "Your akan name is abenaa";
+                  break;
+                  case 3:
+                    document.getElementById("result").innerHTML = "The day is on a wednesday." + " " + "Your akan name is akua";
+                  break;
+                  case 4:
+                    document.getElementById("result").innerHTML = "The day is on a thursday." + " " + "Your akan name is yaa";
+                  break;
+                  case 5:
+                    document.getElementById("result").innerHTML = "The day is on a friday." + " " + "Your akan name is afua";
+                  break;
+                  case 6:
+                    document.getElementById("result").innerHTML = "The day is on a saturday." + " " + "Your akan name is ama";
+                  break;
+
+              }
+        break
+        default:
+        console.log("pass");
     }
 }
