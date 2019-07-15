@@ -67,31 +67,36 @@ function checkTheGender(){
                   document.getElementById("result").innerHTML = "Your birthday is on a saturday." + " " + "Your akan name is " + maleNames[6];
                 break;
                 default:
+                    document.getElementById("result").innerHTML = "I cannot find your Akan Name";
+                break;
                 
               }
         break;
         case gender = "female":
                 switch(day){
                   case 0:
-                    document.getElementById("result").innerHTML = "Your birthday is on a sunday." + "  " + "Your akan name is  akosua";
+                    document.getElementById("result").innerHTML = "Your birthday is on a sunday." + "  " + "Your akan name is  Akosua";
                   break;
                   case 1:
-                    document.getElementById("result").innerHTML = "Your birthday is on a monday." + " " + "Your akan name is adwoa ";
+                    document.getElementById("result").innerHTML = "Your birthday is on a monday." + " " + "Your akan name is Adwoa ";
                   break;
                   case 2:
-                    document.getElementById("result").innerHTML = "Your birthday is on a tuesday." + " " + "Your akan name is abenaa";
+                    document.getElementById("result").innerHTML = "Your birthday is on a tuesday." + " " + "Your akan name is Abenaa";
                   break;
                   case 3:
-                    document.getElementById("result").innerHTML = "Your birthday is on a wednesday." + " " + "Your akan name is akua";
+                    document.getElementById("result").innerHTML = "Your birthday is on a wednesday." + " " + "Your akan name is Akua";
                   break;
                   case 4:
-                    document.getElementById("result").innerHTML = "Your birthday is on a thursday." + " " + "Your akan name is yaa";
+                    document.getElementById("result").innerHTML = "Your birthday is on a thursday." + " " + "Your akan name is Yaa";
                   break;
                   case 5:
-                    document.getElementById("result").innerHTML = "Your birthday is on a friday." + " " + "Your akan name is afua";
+                    document.getElementById("result").innerHTML = "Your birthday is on a friday." + " " + "Your akan name is Afua";
                   break;
                   case 6:
-                    document.getElementById("result").innerHTML = "Your birthday is on a saturday." + " " + "Your akan name is ama";
+                    document.getElementById("result").innerHTML = "Your birthday is on a saturday." + " " + "Your akan name is Ama";
+                  break;
+                  default:
+                    document.getElementById("result").innerHTML = "I cannot find your Akan Name";
                   break;
 
               }
