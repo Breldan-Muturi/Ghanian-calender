@@ -20,6 +20,17 @@ function getTheDay(){
       checkTheGender();
       console.log("The function runs");
 }
+function verify(){
+  if(dayOfBirth<1|| dayOfBirth>31||dayOfBirth===""){
+    alert("Invalid day of birth!");
+  } else if (month<1||month>12||month===""){
+    alert("Invalid month!");
+  } else if(year<0||year>99||year===""){
+    alert("Invalid year!");
+  } else{
+    return false;
+  }
+}
 
 
 let daysOfWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];

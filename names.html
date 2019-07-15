@@ -55,13 +55,14 @@
                     <div class="form-group">
                       <label for="birthDay">Day of month</label>
                       <input type="text" placeholder="Day of Month (1-31)" class="form-control" id="birthday">
+                      <small id="emailHelp" class="form-text ">We'll never share your data with anyone else.</small>
                     </div>
                     <form class="radio-button">
                       <input type="radio" class="genders" value="male" id="rad1" name="choice">Male
                       <input type="radio" class="genders" value="female" id="rad1" name="choice">Female
                     </form>
                     <br>
-                    <a href="#result"><button type="button" name="button" class="btn btn-dark" onclick="checkTheDay();">Calculate Day</button></a>
+                    <a href="#result"><button type="button" name="button" class="btn btn-dark" onclick="checkTheDay(); verify();">Calculate Day</button></a>
                     <p id="result">0</h1>
             </div>
         
