@@ -42,19 +42,19 @@
                   <div class="panel col-sm-3 offset-sm-3 text-center">
                     <div class="form-group">
                       <label for="century">Century</label>
-                      <input type="text" class="form-control" placeholder="Enter century (1st 2 digits)" id="century">
+                      <input type="number" class="form-control" placeholder="Enter century (1st 2 digits)" id="century" max="99">
                     </div>
                     <div class="form-group">
                       <label for="year">Year</label>
-                      <input type="text" placeholder="Enter year (last 2 digits)" class="form-control" id="year">
+                      <input type="number" placeholder="Enter year (last 2 digits)" class="form-control" id="year" max="99" min="0">
                     </div>
                     <div class="form-group">
                       <label for="month">Month</label>
-                      <input type="text" class="form-control" placeholder="Month of year (1-12)" id="month">
+                      <input type="number" class="form-control" placeholder="Month of year (1-12)" id="month" max="12" min="1">
                     </div>
                     <div class="form-group">
                       <label for="birthDay">Day of month</label>
-                      <input type="text" placeholder="Day of Month (1-31)" class="form-control" id="birthday">
+                      <input type="number" placeholder="Day of Month (1-31)" class="form-control" id="birthday" max="31" min="1">
                       <small id="emailHelp" class="form-text ">We'll never share your data with anyone else.</small>
                     </div>
                     <form class="radio-button">
