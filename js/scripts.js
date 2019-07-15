@@ -33,9 +33,6 @@ function verify(){
 }
 
 let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-
-
-
 function checkTheGender(){
   var sex = document.getElementsByName("choice");
   if(sex[0].checked == true){
